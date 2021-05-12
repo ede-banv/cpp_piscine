@@ -1,67 +1,87 @@
-#include <iostream>
+#include <iomanip>
 #include "annuaire.hpp"
 
-Annuaire::Annuaire(char *fname, char *lname, char* nickname, char *login, char *padress, char *email, int number[10], int bday[3][2], char *fav_meal, char* underwear, char* secret) :
-fname(fname), lname(lname), nickname(nickname), login(login), padress(padress), email(email), number(number), bday(bday), fav_meal(fav_meal), underwear(underwear), secret(secret)
-{
-	std::cout << "Contact added successfully!" <<std::endl;
-}
+Annuaire::Annuaire() {}
+Annuaire::~Annuaire() {
+	std::cout << "Name: " << this->lname << std::endl;}
 
-Annuaire::~Annuaire()
+static int	get_line(std::string attr, std::string *str)
 {
-	std::cout << "Contact deleted :(" << std::endl;
-}
-
-void	troncate(const char *str)
-{
-	if (strlen(str) > 10)
+	std::cout << "Enter their " << attr << ": ";
+	std::cin.ignore();
+	std::getline(std::cin, *str);
+	std::cout << "\n\n" << *str << "\n\n";
+	if (*str == "")
 	{
-		for (int i = 0; i < 9; i++)
-		{
-			if ((*str) != '\0')
-			{
-				putchar(*str);
-				str++;
-			}
-		}
-		std::cout << ".";
+		std::cout << "YOU CAN'T LEAVE THE FIELD EMPTY, MAN" << std::endl;
+		return (0);
+	}
+	return (1);
+}
+
+int	Annuaire::createContact()
+{
+	std::cout << "Please enter your contact's info!" << std::endl;
+	if (!get_line("first name", &this->fname))
+		return (0);
+	if (!get_line("last name", &this->lname))
+		return (0);
+	if (!get_line("nickname", &this->nickname))
+		return (0);
+	if (!get_line("42 login", &this->login))
+		return (0);
+	if (!get_line("address", &this->paddress))
+		return (0);
+	if (!get_line("email address", &this->email))
+		return (0);
+	if (!get_line("phone number", &this->number))
+		return (0);
+	if (!get_line("birthday:", &this->bday))
+		return (0);
+	if (!get_line("favorite meal", &this->fav_meal))
+		return (0);
+	if (!get_line("underwear color", &this->underwear))
+		return (0);
+	if (!get_line("darkest secret", &this->secret))
+		return (0);
+	std::cout << "Contact added successfully!" << std::endl;
+	return (1);
+}
+
+void	cut_string(std::string str)
+{
+	if (str.length() > 10)
+	{
+		str.substr(0,9);
+		str.append(".");
 	}
 	else
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			if ((*str) != '\0')
-			{
-				putchar(*str);
-				str++;
-			}
-			else
-				std::cout << " ";
-		}
-	}
+		std::cout << std::setfill(' ') << std::setw(10);
+	std::cout << str;
+
 }
 
 void	Annuaire::getSearch() const
 {
-	troncate(self->fname);
+	cut_string(this->fname);
 	std::cout << "|";
-	troncate(self->lname);
+	cut_string(this->lname);
 	std::cout << "|";
-	troncate(self->nickname);
+	cut_string(this->nickname);
 	std::cout << std::endl;
 }
 
 void Annuaire::getContact() const
 {
-	std::cout << "Name: " << self->fname << std::endl;
-	std::cout << "Last name: " << self->lname << std::endl;
-	std::cout << "Nickname: " << self->nickname << std::endl;
-	std::cout << "Login: " << self->login << std::endl;
-	std::cout << "Adress: " << self->padress << std::endl;
-	std::cout << "Email: " << self->email << std::endl;
-	std::cout << "Phone number: " << self->number << std::endl;
-	std::cout << "Birthday: " << self->bday[0] << "/" << self->bday[1] << "/" << self->day[2] << std::endl;
-	std::cout << "Favorite meal: " << self->fav_meal << std::endl;
-	std::cout << "Underwear color: " << self->underwear << std::endl;
-	std::cout << "Darkest Secret: " << self->secret << std::endl;
+	std::cout << "Name: " << this->fname << std::endl;
+	std::cout << "Last name: " << this->lname << std::endl;
+	std::cout << "Nickname: " << this->nickname << std::endl;
+	std::cout << "Login: " << this->login << std::endl;
+	std::cout << "Address: " << this->paddress << std::endl;
+	std::cout << "Email: " << this->email << std::endl;
+	std::cout << "Phone number: " << this->number << std::endl;
+	std::cout << "Birthday: " << this->bday << std::endl;
+	std::cout << "Favorite meal: " << this->fav_meal << std::endl;
+	std::cout << "Underwear color: " << this->underwear << std::endl;
+	std::cout << "Darkest Secret: " << this->secret << std::endl;
 }

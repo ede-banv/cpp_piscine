@@ -1,23 +1,29 @@
-#include <iostream>
+#ifndef __ANNUAIRE__
+# define __ANNUAIRE__
+
+# include <iostream>
 
 class Annuaire
 {
 	public:
-		Annuaire(char *fname, char *lname, char* nickname, char *login, char *padress, char *email, int number[10], int bday[3][2], char *fav_meal, char* underwear, char* secret);
+		Annuaire();
 		~Annuaire();
 
+		int		createContact();
 		void	getSearch() const;
 		void	getContact() const;
 	private:
-		char *fname;
-		char *lname;
-		char* nickname;
-		char *login;
-		char *padress;
-		char *email;
-		int number[10];
-		int bday[3][2];
-		char *fav_meal;
-		char* underwear;
-		char* secret;
-}
+		std::string	fname;
+		std::string	lname;
+		std::string	nickname;
+		std::string	login;
+		std::string	paddress;
+		std::string	email;
+		std::string number;
+		std::string bday;
+		std::string	fav_meal;
+		std::string	underwear;
+		std::string	secret;
+};
+
+#endif
