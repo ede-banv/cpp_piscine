@@ -2,18 +2,15 @@
 #include "annuaire.hpp"
 
 Annuaire::Annuaire() {}
-Annuaire::~Annuaire() {
-	std::cout << "Name: " << this->lname << std::endl;}
+Annuaire::~Annuaire() {}
 
 static int	get_line(std::string attr, std::string *str)
 {
 	std::cout << "Enter their " << attr << ": ";
-	std::cin.ignore();
 	std::getline(std::cin, *str);
-	std::cout << "\n\n" << *str << "\n\n";
 	if (*str == "")
 	{
-		std::cout << "YOU CAN'T LEAVE THE FIELD EMPTY, MAN" << std::endl;
+		std::cout << "\e[1;31mYOU CAN'T LEAVE THE FIELD EMPTY, MAN\e[0m" << std::endl;
 		return (0);
 	}
 	return (1);
@@ -21,7 +18,7 @@ static int	get_line(std::string attr, std::string *str)
 
 int	Annuaire::createContact()
 {
-	std::cout << "Please enter your contact's info!" << std::endl;
+	std::cout << "\nPlease enter your contact's info!\n" << std::endl;
 	if (!get_line("first name", &this->fname))
 		return (0);
 	if (!get_line("last name", &this->lname))
@@ -36,7 +33,7 @@ int	Annuaire::createContact()
 		return (0);
 	if (!get_line("phone number", &this->number))
 		return (0);
-	if (!get_line("birthday:", &this->bday))
+	if (!get_line("birthday", &this->bday))
 		return (0);
 	if (!get_line("favorite meal", &this->fav_meal))
 		return (0);
@@ -44,7 +41,7 @@ int	Annuaire::createContact()
 		return (0);
 	if (!get_line("darkest secret", &this->secret))
 		return (0);
-	std::cout << "Contact added successfully!" << std::endl;
+	std::cout << "\n\e[32mContact added successfully!\e[0m" << std::endl;
 	return (1);
 }
 
@@ -52,7 +49,7 @@ void	cut_string(std::string str)
 {
 	if (str.length() > 10)
 	{
-		str.substr(0,9);
+		str.resize(9);
 		str.append(".");
 	}
 	else
@@ -73,7 +70,7 @@ void	Annuaire::getSearch() const
 
 void Annuaire::getContact() const
 {
-	std::cout << "Name: " << this->fname << std::endl;
+	std::cout << "\nName: " << this->fname << std::endl;
 	std::cout << "Last name: " << this->lname << std::endl;
 	std::cout << "Nickname: " << this->nickname << std::endl;
 	std::cout << "Login: " << this->login << std::endl;

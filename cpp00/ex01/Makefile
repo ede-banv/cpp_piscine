@@ -1,6 +1,6 @@
 CC = clang++
 
-C_FLAGS = -Wall -Wextra -Werror
+C_FLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 
 SRCS = main.cpp annuaire.cpp
 
