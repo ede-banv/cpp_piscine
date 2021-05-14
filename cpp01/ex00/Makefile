@@ -2,11 +2,11 @@ CC = clang++
 
 C_FLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp annuaire.cpp
+SRCS = main.cpp Pony.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = PhoneBook
+NAME = Ponies
 
 $(NAME): ${OBJS}
 	${CC} ${C_FLAGS} ${OBJS} -o ${NAME}
