@@ -8,7 +8,6 @@ int		main()
 	std::string input;
 	Annuaire 	book[8];
 
-	bzero(&book, sizeof(Annuaire) * 8);
 	std::cout << "\n\e[1;36m * Welcome to your phone book <3 *\e[0m\n" << std::endl;
 	while (1)
 	{

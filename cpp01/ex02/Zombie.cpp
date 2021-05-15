@@ -2,7 +2,7 @@
 
 Zombie::Zombie(std::string	name, std::string type): _name(name), _type(type)
 {
-	std::cout << "Poor " << this->_name << ", he just got bitten and now he's a Zombie!" << std::endl;
+	std::cout << "Poor " << this->_name << ", they just got bitten and now they're a Zombie!" << std::endl;
 }
 
 Zombie::~Zombie()
