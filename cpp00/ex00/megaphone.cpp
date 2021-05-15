@@ -3,8 +3,8 @@
 void megaphone(int max, char **string)
 {
 	for (int j = 1; j < max; j++)
-		for (int i = 0; i < strlen(string[j]) ; i++)
-			putchar(toupper(string[j][i]));
+		for (size_t i = 0; i < strlen(string[j]) ; i++)
+			std::cout << (char)toupper(string[j][i]);
 	std::cout << std::endl;
 }
 

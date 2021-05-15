@@ -2,12 +2,11 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = megaphone.cpp
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = megaphone
-
+NAME = Zombies
 
 $(NAME): ${OBJS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
