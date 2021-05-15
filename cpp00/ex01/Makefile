@@ -1,6 +1,6 @@
-CC = clang++
+CXX = clang++
 
-C_FLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp annuaire.cpp
 
@@ -9,7 +9,7 @@ OBJS = ${SRCS:.cpp=.o}
 NAME = PhoneBook
 
 $(NAME): ${OBJS}
-	${CC} ${C_FLAGS} ${OBJS} -o ${NAME}
+	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
 all: ${NAME}
 
