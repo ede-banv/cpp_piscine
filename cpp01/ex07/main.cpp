@@ -53,6 +53,6 @@ int         main(int ac, char **av)
     }
     else
         replace(av[1], av[2], av[3]);
-    return (1);
+    return (0);
 }
 
