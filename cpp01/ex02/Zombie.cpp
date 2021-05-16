@@ -1,4 +1,6 @@
 #include "ZombieEvent.hpp"
+#include <ctime>
+#include <stdlib.h>
 
 Zombie::Zombie(std::string	name, std::string type): _name(name), _type(type)
 {

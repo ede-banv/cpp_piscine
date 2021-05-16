@@ -1,4 +1,6 @@
 #include "ZombieHorde.hpp"
+#include <ctime>
+#include <stdlib.h>
 
 ZombieHorde::ZombieHorde(int n): _n(n)
 {
@@ -16,7 +18,7 @@ ZombieHorde::ZombieHorde(int n): _n(n)
 
 	this->horde = new Zombie[this->_n];
 	for (int i = 0; i < n; i++)
-		horde[i].setZombie(names[rand() % nbnames], types[rand() % nbtypes]);
+		horde[i].setZombie(names[std::rand() % nbnames], types[std::rand() % nbtypes]);
 }
 
 ZombieHorde::~ZombieHorde()
