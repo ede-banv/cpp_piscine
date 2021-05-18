@@ -13,10 +13,10 @@ class $class
 {
 	public:
 		$class();
-		$class($class& copy);
+		$class(const $class& copy);
 		~$class();
 
-		$class&	operator=($class const& rhs);
+		$class&	operator=(const $class& rhs);
 	private:
 		/*args*/
 };

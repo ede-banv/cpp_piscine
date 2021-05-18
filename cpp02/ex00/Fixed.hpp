@@ -9,8 +9,11 @@ class Fixed
 		~Fixed();
 
 		Fixed&	operator=(Fixed const& rhs);
+		int		getRawBits() const;
+		void	setRawBits(const int raw);
 	private:
-		/*args*/
+		int					_fixed_value;
+		static const int	_fract = 8;
 };
 
 #endif
