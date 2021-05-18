@@ -19,23 +19,23 @@ Fixed::Fixed(const Fixed& copy)
 }
 Fixed::~Fixed(){}
 
-Fixed&	Fixed::operator=(const Fixed& rhs)
+Fixed&			Fixed::operator=(const Fixed& rhs)
 {
 	this->_fixed_value = rhs.getRawBits();
 	return *this;
 }
 
-int		Fixed::getRawBits() const
+int				Fixed::getRawBits() const
 {
 	return this->_fixed_value;
 }
 
-void	Fixed::setRawBits(const int raw)
+void			Fixed::setRawBits(const int raw)
 {
 	this->_fixed_value = raw;
 }
 
-float	Fixed::toFloat() const
+float			Fixed::toFloat() const
 {
 	return (double)this->_fixed_value / (double)(1 << this->_fract);
 }
