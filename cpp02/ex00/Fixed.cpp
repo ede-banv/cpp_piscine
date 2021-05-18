@@ -1,13 +1,13 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed(): _fixed_value(0) {}
-Fixed::Fixed(Fixed& copy)
+Fixed::Fixed(const Fixed& copy)
 {
 	*this = copy;
 }
 Fixed::~Fixed(){}
 
-Fixed&	Fixed::operator=(Fixed const& rhs)
+Fixed&	Fixed::operator=(const Fixed& rhs)
 {
 	this->_fixed_value = rhs.getRawBits();
 	return *this;
