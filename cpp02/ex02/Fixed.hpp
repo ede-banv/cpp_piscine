@@ -19,10 +19,10 @@ class Fixed
 		int		toInt() const;
 
 		Fixed&	operator=(const Fixed& rhs);
-		int		operator+(const Fixed& rhs) const;
-		int		operator-(const Fixed& rhs) const;
-		int		operator*(const Fixed& rhs) const;
-		int		operator/(const Fixed& rhs) const;
+		Fixed	operator+(const Fixed& rhs) const;
+		Fixed	operator-(const Fixed& rhs) const;
+		Fixed	operator*(const Fixed& rhs) const;
+		Fixed	operator/(const Fixed& rhs) const;
 		bool	operator>(const Fixed& rhs) const;
 		bool	operator<(const Fixed& rhs) const;
 		bool	operator>=(const Fixed& rhs) const;

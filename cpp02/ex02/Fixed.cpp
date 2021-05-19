@@ -52,24 +52,28 @@ Fixed&			Fixed::operator=(const Fixed& rhs)
 	return *this;
 }
 
-int				Fixed::operator+(const Fixed& rhs) const
+Fixed			Fixed::operator+(const Fixed& rhs) const
 {
-	return this->_fixed_value + rhs.getRawBits();
+	Fixed add(this->toFloat() + rhs.toFloat());
+	return (add);
 }
 
-int				Fixed::operator-(const Fixed& rhs) const
+Fixed			Fixed::operator-(const Fixed& rhs) const
 {
-	return this->_fixed_value - rhs.getRawBits();
+	Fixed less(this->toFloat() - rhs.toFloat());
+	return (less);
 }
 
-int				Fixed::operator*(const Fixed& rhs) const
+Fixed			Fixed::operator*(const Fixed& rhs) const
 {
-	return this->_fixed_value * rhs.getRawBits();
+	Fixed prod(this->toFloat() * rhs.toFloat());
+	return (prod);
 }
 
-int				Fixed::operator/(const Fixed& rhs) const
+Fixed			Fixed::operator/(const Fixed& rhs) const
 {
-	return this->_fixed_value / rhs.getRawBits();
+	Fixed div(this->toFloat() / rhs.toFloat());
+	return (div);
 }
 
 bool			Fixed::operator==(const Fixed& rhs) const
@@ -107,7 +111,7 @@ bool			Fixed::operator<(const Fixed& rhs) const
 	return false;
 }
 
-bool			Fixed::operator>=(const Fixed& rhs) const
+bool			Fixed::operator<=(const Fixed& rhs) const
 {
 	if (*this < rhs || *this == rhs)
 		return true;
