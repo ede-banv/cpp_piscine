@@ -35,5 +35,5 @@ int	main()
 	jojo.challengeNewcomer("Jehanne");
 	jojo.challengeNewcomer("Jehanne");
 	}
-	return(1);
+	return(0);
 }
