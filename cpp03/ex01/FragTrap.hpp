@@ -1,22 +1,22 @@
-#ifndef __SCAVTRAP__
-# define __SCAVTRAP__
+#ifndef __FRAGTRAP__
+# define __FRAGTRAP__
 
 #include <iostream>
 
-class ScavTrap
+class FragTrap
 {
 	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap& copy);
-		~ScavTrap();
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap& copy);
+		~FragTrap();
 
-		ScavTrap&	operator=(const ScavTrap& rhs);
+		FragTrap&	operator=(const FragTrap& rhs);
 		void		rangedAttack(const std::string& target);
 		void		meleeAttack(const std::string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
-		void		challengeNewcomer(const std::string& target);
+		void		vaulthunter_dot_exe(const std::string& target);
 
 		int			_hp;
 		int			_max_hp;
