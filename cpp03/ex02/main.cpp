@@ -4,6 +4,7 @@
 int	main()
 {
 	{
+	std::cout <<"\n\e[1;36m -- FragTrap Test --\e[0m\n" << std::endl;
 	FragTrap	marc("Marc");
 	FragTrap	emma("Emma");
 
@@ -21,6 +22,7 @@ int	main()
 	emma.vaulthunter_dot_exe("Marc");
 	}
 	{
+	std::cout <<"\n\e[1;36m -- ScavTrap Test --\e[0m\n" << std::endl;
 	ScavTrap	jeje("Jehanne");
 	ScavTrap	jojo("Joscleyn");
 
