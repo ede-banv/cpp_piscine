@@ -10,18 +10,18 @@ int	main()
 	FragTrap	emma(marc);
 	emma.name = "Emma";
 
-	marc.rangedAttack("Emma");
+	marc.rangedAttack(emma.name);
 	emma.takeDamage(marc.ranged_dmg);
-	emma.rangedAttack("Marc");
+	emma.rangedAttack(marc.name);
 	marc.takeDamage(emma.ranged_dmg);
-	emma.meleeAttack("Marc");
+	emma.meleeAttack(marc.name);
 	marc.takeDamage(emma.melee_dmg);
 	emma.beRepaired(50);
-	emma.vaulthunter_dot_exe("Marc");
-	emma.vaulthunter_dot_exe("Marc");
-	emma.vaulthunter_dot_exe("Marc");
-	emma.vaulthunter_dot_exe("Marc");
-	emma.vaulthunter_dot_exe("Marc");
+	emma.vaulthunter_dot_exe(marc.name);
+	emma.vaulthunter_dot_exe(marc.name);
+	emma.vaulthunter_dot_exe(marc.name);
+	emma.vaulthunter_dot_exe(marc.name);
+	emma.vaulthunter_dot_exe(marc.name);
 	}
 	{
 	std::cout <<"\n\e[1;36m -- ScavTrap Test --\e[0m\n" << std::endl;
@@ -29,16 +29,16 @@ int	main()
 	ScavTrap	jojo(jeje);
 	jojo.name = "Joscelyn";
 
-	jeje.rangedAttack("Joscelyn");
+	jeje.rangedAttack(jojo.name);
 	jojo.takeDamage(jeje.ranged_dmg);
-	jojo.rangedAttack("Jehanne");
+	jojo.rangedAttack(jeje.name);
 	jeje.takeDamage(jojo.ranged_dmg);
-	jojo.meleeAttack("Jehanne");
+	jojo.meleeAttack(jeje.name);
 	jeje.takeDamage(jojo.melee_dmg);
 	jojo.beRepaired(50);
-	jojo.challengeNewcomer("Jehanne");
-	jojo.challengeNewcomer("Jehanne");
-	jojo.challengeNewcomer("Jehanne");
+	jojo.challengeNewcomer(jeje.name);
+	jojo.challengeNewcomer(jeje.name);
+	jojo.challengeNewcomer(jeje.name);
 	}
 	{
 	std::cout <<"\n\e[1;36m -- NinjaTrap Test --\e[0m\n" << std::endl;
@@ -46,11 +46,11 @@ int	main()
 	NinjaTrap	jx(jerem);
 	jx.name = "Jean-Xavier";
 
-	jerem.rangedAttack("Joscelyn");
+	jerem.rangedAttack(jx.name);
 	jx.takeDamage(jerem.ranged_dmg);
-	jx.rangedAttack("Jehanne");
+	jx.rangedAttack(jerem.name);
 	jerem.takeDamage(jx.ranged_dmg);
-	jx.meleeAttack("Jehanne");
+	jx.meleeAttack(jerem.name);
 	jerem.takeDamage(jx.melee_dmg);
 	jx.beRepaired(50);
 
