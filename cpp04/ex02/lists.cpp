@@ -1,8 +1,9 @@
-#include "Squad.cpp"
+#include <iostream>
+#include "Squad.hpp"
 
 t_list	*ft_lstnew(ISpaceMarine *new_member)
 {
-	t_list	*newelem = NULL;
+	t_list	*newelem = new t_list;
 
 	newelem->member = new_member;
 	newelem->next = NULL;
@@ -33,7 +34,10 @@ void	ft_lstadd_back(t_list **alst, t_list *newl)
 void	ft_lstdelone(t_list *lst)
 {
 	if (lst)
+	{
 		delete(lst->member);
+		delete(lst);
+	}
 }
 
 void	ft_lstclear(t_list **lst)
@@ -50,5 +54,5 @@ void	ft_lstclear(t_list **lst)
 		ft_lstdelone(indice);
 		indice = tmp;
 	}
-	*lst = NULL;
+    *lst = NULL;
 }

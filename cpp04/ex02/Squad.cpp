@@ -36,7 +36,7 @@ ISpaceMarine*	Squad::getUnit(int n) const
 	if (this->_alst && n < this->_nb_units)
 	{
 		tmp = this->_alst;
-		for (int i = 0; i <= n; i++)
+		for (int i = 0; i < n; i++)
 			tmp = tmp->next;
 		return tmp->member;
 	}
