@@ -1,10 +1,30 @@
 #include "SuperMutant.hpp"
 
-SuperMutant::SuperMutant(){}
-SuperMutant::SuperMutant(const SuperMutant& copy)
+SuperMutant::SuperMutant(): Enemy(170, "Super Muatnt")
+{
+	std::cout << "Gaaah. Me want smash heads!" << std::endl;
+}
+
+SuperMutant::SuperMutant(const SuperMutant& copy) : Enemy(copy)
 {
 	*this = copy;
 }
-SuperMutant::~SuperMutant(){}
 
-SuperMutant&	SuperMutant::operator=(const SuperMutant& rhs){}
+SuperMutant::~SuperMutant()
+{
+	std::cout << "Aaargh..." << std::endl;
+}
+
+SuperMutant&	SuperMutant::operator=(const SuperMutant& rhs)
+{
+	this->_hp = rhs.getHP();
+	this->_type = rhs.getType();
+	return *this;
+}
+
+void			SuperMutant::takeDamage(int n)
+{
+	if (n >= 0)
+		if (n <= this->_hp)
+			this->_hp -= n - 3;
+}

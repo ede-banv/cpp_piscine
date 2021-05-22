@@ -19,6 +19,8 @@ class AWeapon
 		std::string	_name;
 		int			_apcost;
 		int			_damage;
+	private:
+		AWeapon();
 };
 
 #endif

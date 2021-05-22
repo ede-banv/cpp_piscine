@@ -17,6 +17,8 @@ class Enemy
 	protected:
 		int			_hp;
 		std::string	_type;
+	private:
+		Enemy();
 };
 
 #endif

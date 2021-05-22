@@ -1,7 +1,9 @@
 #ifndef __RADSCORPION__
 # define __RADSCORPION__
 
-class RadScorpion
+#include "Enemy.hpp"
+
+class RadScorpion: public Enemy
 {
 	public:
 		RadScorpion();

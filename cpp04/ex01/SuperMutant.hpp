@@ -1,7 +1,9 @@
 #ifndef __SUPERMUTANT__
 # define __SUPERMUTANT__
 
-class SuperMutant
+#include "Enemy.hpp"
+
+class SuperMutant: public Enemy
 {
 	public:
 		SuperMutant();
@@ -9,8 +11,7 @@ class SuperMutant
 		~SuperMutant();
 
 		SuperMutant&	operator=(const SuperMutant& rhs);
-	private:
-		/*args*/
+		void			takeDamage(int n);
 };
 
 #endif

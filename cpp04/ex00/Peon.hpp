@@ -12,6 +12,8 @@ class Peon: public Victim
 
 		Peon&	operator=(const Peon& rhs);
 		void	getPolymorphed() const;
+	private:
+		Peon();
 };
 
 #endif

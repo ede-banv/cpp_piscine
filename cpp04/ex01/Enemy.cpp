@@ -1,5 +1,7 @@
 #include "Enemy.hpp"
 
+Enemy::Enemy(){}
+
 Enemy::Enemy(int hp, const std::string& type): _hp(hp), _type(type){}
 
 Enemy::Enemy(const Enemy& copy)

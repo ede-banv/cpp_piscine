@@ -15,6 +15,8 @@ class Victim
 		virtual void	getPolymorphed() const;
 	protected:
 		std::string	_name;
+
+		Victim();
 };
 
 std::ostream&	operator<<(std::ostream& o, Victim& rhs);
