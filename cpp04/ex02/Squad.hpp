@@ -26,4 +26,8 @@ class Squad: public ISquad
 
 };
 
+t_list	*ft_lstnew(ISpaceMarine *new_member);
+void	ft_lstadd_back(t_list **alst, t_list *newl);
+void	ft_lstclear(t_list **lst);
+
 #endif

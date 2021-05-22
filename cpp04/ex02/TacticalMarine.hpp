@@ -1,7 +1,9 @@
 #ifndef __TACTICALMARINE__
 # define __TACTICALMARINE__
 
-class TacticalMarine
+#include "ISpaceMarine.hpp"
+
+class TacticalMarine: public ISpaceMarine
 {
 	public:
 		TacticalMarine();
@@ -9,8 +11,10 @@ class TacticalMarine
 		~TacticalMarine();
 
 		TacticalMarine&	operator=(const TacticalMarine& rhs);
-	private:
-		/*args*/
+		ISpaceMarine* 	clone() const;
+		void 			battleCry() const;
+		void 			rangedAttack() const;
+		void 			meleeAttack() const;
 };
 
 #endif

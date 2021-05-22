@@ -1,7 +1,9 @@
 #ifndef __ASSAULTTERMINATOR__
 # define __ASSAULTTERMINATOR__
 
-class AssaultTerminator
+#include "ISpaceMarine.hpp"
+
+class AssaultTerminator: public ISpaceMarine
 {
 	public:
 		AssaultTerminator();
@@ -9,8 +11,10 @@ class AssaultTerminator
 		~AssaultTerminator();
 
 		AssaultTerminator&	operator=(const AssaultTerminator& rhs);
-	private:
-		/*args*/
+		ISpaceMarine* 	clone() const;
+		void 			battleCry() const;
+		void 			rangedAttack() const;
+		void 			meleeAttack() const;
 };
 
 #endif

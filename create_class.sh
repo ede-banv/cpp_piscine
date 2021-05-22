@@ -25,10 +25,12 @@ class $class
 	echo "#include \"$class.hpp\"
 
 $class::$class(){}
+
 $class::$class(const $class& copy)
 {
 	*this = copy;
 }
+
 $class::~$class(){}
 
 $class&	$class::operator=(const $class& rhs){}" > ${class}.cpp
