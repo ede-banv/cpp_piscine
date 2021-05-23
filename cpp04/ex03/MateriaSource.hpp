@@ -2,6 +2,7 @@
 # define __MATERIASOURCE__
 
 #include "IMateriaSource.hpp"
+#include <string.h>
 
 class MateriaSource: public IMateriaSource
 {

@@ -2,6 +2,7 @@
 # define __ICHARACTER__
 
 # include "AMateria.hpp"
+class AMateria;
 
 class ICharacter
 {

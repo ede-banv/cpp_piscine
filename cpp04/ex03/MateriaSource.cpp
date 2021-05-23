@@ -1,9 +1,13 @@
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource(){}
+MateriaSource::MateriaSource()
+{
+	bzero(&this->_source, sizeof(this->_source));
+}
 
 MateriaSource::MateriaSource(const MateriaSource& copy)
 {
+	bzero(&this->_source, sizeof(this->_source));
 	for (int i = 0; i < 4; i++)
 		if (this->_source[i])
 			delete this->_source[i];
@@ -22,7 +26,8 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& rhs)
 	for (int i = 0; i < 4; i++)
 		if (this->_source[i])
 			delete this->_source[i];
-	//copy source from rhs
+	for (int i = 0; i < 4; i++)
+		this->_source[i] = rhs._source[i];
 	return *this;
 }
 

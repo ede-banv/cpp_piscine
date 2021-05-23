@@ -17,6 +17,12 @@ int main()
     ICharacter* bob = new Character("bob");
     me->use(0, *bob);
     me->use(1, *bob);
+    me->use(1, *bob);
+    std::cout << "\n cure xp: " << tmp->getXP() << "\n\n";
+    tmp = src->createMateria("ice");
+    bob->equip(tmp);
+    bob->use(0, *me);
+    std::cout << "\n ice xp: " << tmp->getXP() << "\n\n";
     delete bob;
     delete me;
     delete src;

@@ -2,7 +2,10 @@
 
 Character::Character(){}
 
-Character::Character(std::string name): _name(name){}
+Character::Character(std::string name): _name(name)
+{
+	bzero(&this->_inventory, sizeof(this->_inventory));
+}
 
 Character::Character(const Character& copy)
 {
@@ -25,7 +28,8 @@ Character&			Character::operator=(const Character& rhs)
 		if (this->_inventory[i])
 			delete this->_inventory[i];
 	this->_name = rhs.getName();
-	//copy inventory
+	for(int i = 0; i < 4; i++)
+		this->_inventory[i] = rhs._inventory[i];
 	return *this;
 }
 
