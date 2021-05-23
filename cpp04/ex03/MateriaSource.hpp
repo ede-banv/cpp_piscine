@@ -1,7 +1,9 @@
 #ifndef __MATERIASOURCE__
 # define __MATERIASOURCE__
 
-class MateriaSource
+#include "IMateriaSource.hpp"
+
+class MateriaSource: public IMateriaSource
 {
 	public:
 		MateriaSource();
@@ -9,8 +11,10 @@ class MateriaSource
 		~MateriaSource();
 
 		MateriaSource&	operator=(const MateriaSource& rhs);
+		void			learnMateria(AMateria* newmat);
+        AMateria*		createMateria(const std::string& type);
 	private:
-		/*args*/
+		AMateria*	_source[4];
 };
 
 #endif

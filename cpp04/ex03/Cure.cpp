@@ -1,12 +1,28 @@
 #include "Cure.hpp"
 
-Cure::Cure(){}
+Cure::Cure():AMateria("cure"){}
 
-Cure::Cure(const Cure& copy)
+Cure::Cure(const Cure& copy):AMateria(copy)
 {
 	*this = copy;
 }
 
 Cure::~Cure(){}
 
-Cure&	Cure::operator=(const Cure& rhs){}
+Cure&		Cure::operator=(const Cure& rhs)
+{
+	this->_xp = rhs.getXP();
+	this->_type = rhs.getType();
+	return *this;
+}
+
+AMateria*	Cure::clone() const
+{
+	return new Cure(*this);
+}
+
+void		Cure::use(ICharacter& target)
+{
+	this->_xp += 10;
+	std::cout << "* heals " << target.getName() <<"'s wounds *" << std::endl;
+}
