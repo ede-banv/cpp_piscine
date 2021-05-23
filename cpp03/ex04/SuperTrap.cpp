@@ -34,3 +34,13 @@ SuperTrap&	SuperTrap::operator=(const SuperTrap& rhs)
 	this->_bot_type = rhs._bot_type;
 	return *this;
 }
+
+void		SuperTrap::rangedAttack(const std::string& target)
+{
+	FragTrap::rangedAttack(target);
+}
+
+void		SuperTrap::meleeAttack(const std::string& target)
+{
+	NinjaTrap::meleeAttack(target);
+}
