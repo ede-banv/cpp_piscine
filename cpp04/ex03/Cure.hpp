@@ -1,7 +1,7 @@
 #ifndef __CURE__
 # define __CURE__
 
-#include "AMateria.hpp"
+# include "AMateria.hpp"
 
 class Cure: public AMateria
 {

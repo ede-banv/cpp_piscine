@@ -1,7 +1,7 @@
 #ifndef __ENEMY__
 # define __ENEMY__
 
-#include <iostream>
+# include <iostream>
 
 class Enemy
 {

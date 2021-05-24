@@ -1,8 +1,8 @@
 #ifndef __AMATERIA__
 # define __AMATERIA__
 
-#include <iostream>
-#include "ICharacter.hpp"
+# include <iostream>
+# include "ICharacter.hpp"
 
 class ICharacter;
 
@@ -21,7 +21,7 @@ class AMateria
 	protected:
 		unsigned int	_xp;
 		std::string		_type;
-	private:	
+	private:
 		AMateria();
 };
 

@@ -1,7 +1,7 @@
 #ifndef __POWERFIST__
 # define __POWERFIST__
 
-#include "AWeapon.hpp"
+# include "AWeapon.hpp"
 
 class PowerFist: public AWeapon
 {

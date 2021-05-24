@@ -1,7 +1,7 @@
 #ifndef __CLAPTRAP__
 # define __CLAPTRAP__
 
-#include <iostream>
+# include <iostream>
 
 class ClapTrap
 {

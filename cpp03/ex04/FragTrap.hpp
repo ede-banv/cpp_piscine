@@ -1,7 +1,7 @@
 #ifndef __FRAGTRAP__
 # define __FRAGTRAP__
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class FragTrap: virtual public ClapTrap
 {

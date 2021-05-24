@@ -1,7 +1,7 @@
 #ifndef __SCAVTRAP__
 # define __SCAVTRAP__
 
-#include <iostream>
+# include <iostream>
 
 class ScavTrap
 {

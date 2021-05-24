@@ -1,7 +1,7 @@
 #ifndef __SCAVTRAP__
 # define __SCAVTRAP__
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class ScavTrap: public ClapTrap
 {

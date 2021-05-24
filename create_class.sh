@@ -14,7 +14,7 @@ class $class
 	public:
 		$class();
 		$class(const $class& copy);
-		~$class();
+		virtual ~$class();
 
 		$class&	operator=(const $class& rhs);
 	private:

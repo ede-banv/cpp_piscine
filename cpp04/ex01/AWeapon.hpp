@@ -1,7 +1,7 @@
 #ifndef __AWEAPON__
 # define __AWEAPON__
 
-#include <iostream>
+# include <iostream>
 
 class AWeapon
 {

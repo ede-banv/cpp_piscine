@@ -1,7 +1,7 @@
 #ifndef __SUPERMUTANT__
 # define __SUPERMUTANT__
 
-#include "Enemy.hpp"
+# include "Enemy.hpp"
 
 class SuperMutant: public Enemy
 {

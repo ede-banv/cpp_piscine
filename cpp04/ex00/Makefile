@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME= Polymorph
 
-SRCS = main.cpp Sorcerer.cpp Victim.cpp Peon.cpp
+SRCS = main.cpp Sorcerer.cpp Victim.cpp Peon.cpp Student.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

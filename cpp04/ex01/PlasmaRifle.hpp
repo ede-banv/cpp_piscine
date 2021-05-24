@@ -1,7 +1,7 @@
 #ifndef __PLASMARIFLE__
 # define __PLASMARIFLE__
 
-#include "AWeapon.hpp"
+# include "AWeapon.hpp"
 
 class PlasmaRifle: public AWeapon
 {

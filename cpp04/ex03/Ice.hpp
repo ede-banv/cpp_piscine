@@ -1,7 +1,7 @@
 #ifndef __ICE__
 # define __ICE__
 
-#include "AMateria.hpp"
+# include "AMateria.hpp"
 
 class Ice: public AMateria
 {

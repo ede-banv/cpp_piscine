@@ -1,9 +1,9 @@
 #ifndef __NINJATRAP__
 # define __NINJATRAP__
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
 class NinjaTrap: virtual public ClapTrap
 {

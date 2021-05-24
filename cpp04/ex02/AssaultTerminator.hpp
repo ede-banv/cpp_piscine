@@ -1,7 +1,7 @@
 #ifndef __ASSAULTTERMINATOR__
 # define __ASSAULTTERMINATOR__
 
-#include "ISpaceMarine.hpp"
+# include "ISpaceMarine.hpp"
 
 class AssaultTerminator: public ISpaceMarine
 {

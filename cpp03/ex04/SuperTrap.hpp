@@ -1,7 +1,7 @@
 #ifndef __SUPERTRAP__
 # define __SUPERTRAP__
 
-#include "NinjaTrap.hpp"
+# include "NinjaTrap.hpp"
 
 class SuperTrap: public FragTrap, public NinjaTrap
 {

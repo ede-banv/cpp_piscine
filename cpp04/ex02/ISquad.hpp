@@ -1,7 +1,7 @@
 #ifndef __ISQUAD__
 # define __ISQUAD__
 
-#include "ISpaceMarine.hpp"
+# include "ISpaceMarine.hpp"
 
 class ISquad
 {

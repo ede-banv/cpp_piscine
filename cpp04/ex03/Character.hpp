@@ -1,8 +1,8 @@
 #ifndef __CHARACTER__
 # define __CHARACTER__
 
-#include "ICharacter.hpp"
-#include <string.h>
+# include "ICharacter.hpp"
+# include <string.h>
 
 class Character: public ICharacter
 {

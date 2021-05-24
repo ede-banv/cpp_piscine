@@ -1,10 +1,10 @@
 #ifndef __CHARACTER__
 # define __CHARACTER__
 
-#include <iostream>
-#include <fstream>
-#include "AWeapon.hpp"
-#include "Enemy.hpp"
+# include <iostream>
+# include <fstream>
+# include "AWeapon.hpp"
+# include "Enemy.hpp"
 
 class Character
 {

@@ -1,7 +1,7 @@
 #ifndef __SQUAD__
 # define __SQUAD__
 
-#include "ISquad.hpp"
+# include "ISquad.hpp"
 
 typedef	struct	s_list
 {

@@ -1,7 +1,7 @@
 #ifndef __PEON__
 # define __PEON__
 
-#include "Victim.hpp"
+# include "Victim.hpp"
 
 class Peon: public Victim
 {

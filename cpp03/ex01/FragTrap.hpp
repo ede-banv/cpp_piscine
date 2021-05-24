@@ -1,7 +1,7 @@
 #ifndef __FRAGTRAP__
 # define __FRAGTRAP__
 
-#include <iostream>
+# include <iostream>
 
 class FragTrap
 {

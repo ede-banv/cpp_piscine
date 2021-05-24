@@ -1,8 +1,8 @@
 #ifndef __MATERIASOURCE__
 # define __MATERIASOURCE__
 
-#include "IMateriaSource.hpp"
-#include <string.h>
+# include "IMateriaSource.hpp"
+# include <string.h>
 
 class MateriaSource: public IMateriaSource
 {
