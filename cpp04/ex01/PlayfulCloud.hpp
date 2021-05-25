@@ -8,7 +8,7 @@ class PlayfulCloud: public AWeapon
 	public:
 		PlayfulCloud();
 		PlayfulCloud(const PlayfulCloud& copy);
-		~PlayfulCloud();
+		virtual ~PlayfulCloud();
 
 		PlayfulCloud&	operator=(const PlayfulCloud& rhs);
 		void			attack() const;

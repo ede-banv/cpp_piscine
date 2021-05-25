@@ -8,7 +8,7 @@ class Sukuna: public Enemy
 	public:
 		Sukuna();
 		Sukuna(const Sukuna& copy);
-		~Sukuna();
+		virtual ~Sukuna();
 
 		Sukuna&	operator=(const Sukuna& rhs);
 		void	takeDamage(int n);
