@@ -11,8 +11,6 @@ class RadScorpion: public Enemy
 		~RadScorpion();
 
 		RadScorpion&	operator=(const RadScorpion& rhs);
-	private:
-		/*args*/
 };
 
 #endif

@@ -24,8 +24,7 @@ TacticalMarine&	TacticalMarine::operator=(const TacticalMarine& rhs)
 
 ISpaceMarine*	TacticalMarine::clone() const
 {
-	ISpaceMarine*	newtm = new TacticalMarine(*this);
-	return (newtm);
+	return new TacticalMarine(*this);
 }
 
 void			TacticalMarine::battleCry() const

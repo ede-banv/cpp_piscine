@@ -25,6 +25,10 @@ SuperMutant&	SuperMutant::operator=(const SuperMutant& rhs)
 void			SuperMutant::takeDamage(int n)
 {
 	if (n >= 0)
-		if (n <= this->_hp)
+	{
+		if (n - 3 <= this->_hp)
 			this->_hp -= n - 3;
+		else
+			this->_hp = 0;
+	}
 }

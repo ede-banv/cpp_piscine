@@ -24,8 +24,7 @@ AssaultTerminator&	AssaultTerminator::operator=(const AssaultTerminator& rhs)
 
 ISpaceMarine*	AssaultTerminator::clone() const
 {
-	ISpaceMarine*	newat = new AssaultTerminator(*this);
-	return (newat);
+	return new AssaultTerminator(*this);
 }
 
 void			AssaultTerminator::battleCry() const

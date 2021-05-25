@@ -18,9 +18,11 @@ Squad::~Squad()
 
 Squad&			Squad::operator=(const Squad& rhs)
 {
-	this->_nb_units = rhs.getCount();
-	for (int i = 0; i < this->_nb_units; i++)
-		this->push(rhs.getUnit(i));
+	if (this->_alst)
+		ft_lstclear(&this->_alst);
+	this->_nb_units = 0;
+	for (int i = 0; i < rhs.getCount(); i++)
+		this->push(rhs.getUnit(i)->clone());
 	return *this;
 }
 
