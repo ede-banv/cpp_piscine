@@ -31,4 +31,5 @@ void	Sukuna::takeDamage(int n)
 		else
 			this->_hp = 0;
 	}
+}
 
