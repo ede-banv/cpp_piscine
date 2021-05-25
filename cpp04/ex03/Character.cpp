@@ -9,9 +9,7 @@ Character::Character(std::string name): _name(name)
 
 Character::Character(const Character& copy)
 {
-	for (int i = 0; i < 4; i++)
-		if (this->_inventory[i])
-			delete this->_inventory[i];
+	bzero(&this->_inventory, sizeof(this->_inventory));
 	*this = copy;
 }
 
@@ -27,9 +25,11 @@ Character&			Character::operator=(const Character& rhs)
 	for (int i = 0; i < 4; i++)
 		if (this->_inventory[i])
 			delete this->_inventory[i];
+	bzero(&this->_inventory, sizeof(this->_inventory));
 	this->_name = rhs.getName();
 	for(int i = 0; i < 4; i++)
-		this->_inventory[i] = rhs._inventory[i];
+		if(rhs._inventory[i])
+			this->_inventory[i] = rhs._inventory[i]->clone();
 	return *this;
 }
 

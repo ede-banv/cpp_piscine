@@ -26,8 +26,10 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& rhs)
 	for (int i = 0; i < 4; i++)
 		if (this->_source[i])
 			delete this->_source[i];
+	bzero(&this->_source, sizeof(this->_source));
 	for (int i = 0; i < 4; i++)
-		this->_source[i] = rhs._source[i];
+		if (rhs._source[i])
+			this->_source[i] = rhs._source[i]->clone();
 	return *this;
 }
 
