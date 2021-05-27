@@ -1,7 +1,9 @@
 #ifndef __SHRUBBERYCREATIONFORM__
 # define __SHRUBBERYCREATIONFORM__
 
-class ShrubberyCreationForm
+# include "Form.hpp"
+
+class ShrubberyCreationForm:  public Form
 {
 	public:
 		ShrubberyCreationForm();
@@ -9,6 +11,7 @@ class ShrubberyCreationForm
 		virtual ~ShrubberyCreationForm();
 
 		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& rhs);
+		void					execute(Bureaucrat const & executor) const;
 	private:
 		/*args*/
 };

@@ -10,6 +10,7 @@ class Form
 {
 	public:
 		Form(std::string name, int sign_grade, int exec_grade);
+		Form(std::string name, int sign_grade, int exec_grade, std::string target);
 		Form(const Form& copy);
 		virtual ~Form();
 
@@ -28,11 +29,13 @@ class Form
 		int					getExecGrade() const;
 		bool				getSignState() const;
 		void				beSigned(Bureaucrat& signer);
-	private:
+		void				execute(const Bureaucrat& executor) const;
+	protected:
 		const std::string	_name;
 		bool				_signed;
 		const int			_sign_grade;
 		const int			_exe_grade;
+		std::string			_target;
 
 		Form();
 };

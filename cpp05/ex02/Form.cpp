@@ -11,6 +11,16 @@ Form::Form(std::string name, int sign_grade, int exec_grade): _name(name), _sign
 	return;
 }
 
+Form::Form(std::string name, int sign_grade, int exec_grade, std::string target):
+_name(name), _signed(false), _sign_grade(sign_grade), _exe_grade(exec_grade), _target(target)
+{
+	if (sign_grade > 150 || exec_grade > 150)
+		throw Form::GradeTooLowException();
+	if (sign_grade < 1 || exec_grade < 1)
+		throw Form::GradeTooHighException();
+	return;
+}
+
 Form::Form(const Form& copy):
 _name(copy._name), _sign_grade(copy._sign_grade), _exe_grade(copy._exe_grade)
 {
