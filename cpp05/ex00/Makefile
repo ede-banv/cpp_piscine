@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME= Bureaucrats
 
-SRCS = main.cpp Bureaucrats.cpp
+SRCS = main.cpp Bureaucrat.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
