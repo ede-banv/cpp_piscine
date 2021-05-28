@@ -67,6 +67,18 @@ void				Form::beSigned(Bureaucrat& signer)
 
 }
 
+void				Form::execute(const Bureaucrat& executor) const
+{
+	if (!this->_signed)
+	{
+		throw std::logic_error("Form not signed, could not excecute\n");
+	}
+	if (this->_exe_grade < executor.getGrade())
+	{
+		throw Bureaucrat::GradeTooLowException();
+	}
+}
+
 std::ostream&		operator<<(std::ostream& o, Form& rhs)
 {
 	o << "Form " << rhs.getName() << (rhs.getSignState() ? ": Signed" : ": Not Signed") <<"\nSign Grade: " << rhs.getSignGrade() << "\nExec Grade: " << rhs.getExecGrade() << std::endl;

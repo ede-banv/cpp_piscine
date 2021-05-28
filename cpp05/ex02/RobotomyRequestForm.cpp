@@ -18,3 +18,15 @@ RobotomyRequestForm&	RobotomyRequestForm::operator=(const RobotomyRequestForm& r
 	this->_signed = rhs.getSignState();
 	return *this;
 }
+
+void					RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+	Form::execute(executor);
+	static int time = std::time(0);
+
+	std::srand(time);
+	if (std::rand() % 2)
+		std::cout << this->_target << " has been robotomized successfully.\n";
+	else
+		std::cout << "Robotomization of " << this->_target << " has failed.\n";
+}
