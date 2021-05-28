@@ -29,7 +29,7 @@ class Form
 		int					getExecGrade() const;
 		bool				getSignState() const;
 		void				beSigned(Bureaucrat& signer);
-		void				execute(const Bureaucrat& executor) const;
+		virtual void		execute(const Bureaucrat& executor) const;
 	protected:
 		const std::string	_name;
 		bool				_signed;

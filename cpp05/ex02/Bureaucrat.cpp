@@ -87,7 +87,6 @@ void				Bureaucrat::executeForm(const Form& form)
 		return ;
 	}
 	std::cout << this->_name << " executes form " << form.getName() << std::endl;
-	form.execute(*this);
 }
 
 std::ostream&		operator<<(std::ostream& o, Bureaucrat& rhs)

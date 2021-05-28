@@ -112,6 +112,7 @@ int main()
 		std::cout << *piscineux << std::endl;
 		piscineux->signForm(*shrub);
 		std::cout << std::endl;
+		stud->executeForm(*shrub);
 
 		std::cout << *robocop << "\n" << *tuteur << "\n" << *staff << std::endl;
 		staff->executeForm(*robocop);
