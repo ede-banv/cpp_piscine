@@ -22,7 +22,6 @@ int main()
 		jeje->downgrade();
 		std::cout << *ml << *jeje;
 		std::cout << "\nUpgrade Emma\n";
-
 		try
 		{
 			emma->upgrade();
@@ -31,6 +30,7 @@ int main()
 		{
 			std::cout << e.what();
 		}
+
 		std::cout << "\nDowngrade Martin\n";
 		try
 		{
