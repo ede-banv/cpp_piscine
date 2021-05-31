@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -146,5 +147,30 @@ int main()
 		delete fisso;
 		delete shrub2;
 		delete shrub1;
+	}
+	{
+		std::cout << "\n \e[1;36m** Intern tests ** \e[0m\n";
+		Intern*		baby = new Intern();
+		Bureaucrat*	jojo = new Bureaucrat("Joscelyn", 121);
+		Bureaucrat*	alex = new Bureaucrat("Alexandre", 42);
+		Bureaucrat*	charly = new Bureaucrat("Charly", 5);
+		Form*		rform;
+
+		rform = baby->makeForm("shrubbery creation", "big_house");
+		jojo->signForm(*rform);
+		jojo->executeForm(*rform);
+		delete rform;
+
+		std::cout << std::endl;
+		rform = baby->makeForm("robotomy request", "Jean-Xavier");
+		alex->signForm(*rform);
+		alex->executeForm(*rform);
+		delete rform;
+
+		std::cout << std::endl;
+		rform = baby->makeForm("presidential pardon", "Jeremy");
+		charly->signForm(*rform);
+		charly->executeForm(*rform);
+		delete rform;
 	}
 }
