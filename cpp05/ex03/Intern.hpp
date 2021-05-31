@@ -16,13 +16,13 @@ class Intern
 		struct createForms
 		{
 			std::string	name;
-			Form*		(Intern::*fct)(std::string target);
+			Form*		(Intern::*fct)(std::string target) const;
 		};
 
 		static const struct createForms	intern_fct[3];
-		Form*	createShrubberyForm(std::string target);
-		Form*	createRobotomyForm(std::string target);
-		Form*	createPardonForm(std::string target);
+		Form*	createShrubberyForm(std::string target) const;
+		Form*	createRobotomyForm(std::string target) const;
+		Form*	createPardonForm(std::string target) const;
 
 };
 
