@@ -2,9 +2,9 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME =
+NAME = Conversions
 
-SRCS =
+SRCS = main.cpp
 
 OBJS = ${SRCS:.c=.o}
 
