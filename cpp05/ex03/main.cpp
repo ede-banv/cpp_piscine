@@ -93,6 +93,10 @@ int main()
 		{
 			std::cout << e.what();
 		}
+
+		delete jojo;
+		delete staff;
+		delete bh;
 	}
 	{
 		std::cout << "\n \e[1;36m** Derivated form tests ** \e[0m\n";
@@ -157,20 +161,30 @@ int main()
 		Form*		rform;
 
 		rform = baby->makeForm("shrubbery creation", "big_house");
+		std::cout << *rform << std::endl;
 		jojo->signForm(*rform);
 		jojo->executeForm(*rform);
 		delete rform;
 
 		std::cout << std::endl;
 		rform = baby->makeForm("robotomy request", "Jean-Xavier");
+		std::cout << *rform << std::endl;
 		alex->signForm(*rform);
 		alex->executeForm(*rform);
 		delete rform;
 
 		std::cout << std::endl;
 		rform = baby->makeForm("presidential pardon", "Jeremy");
+		std::cout << *rform << std::endl;
 		charly->signForm(*rform);
 		charly->executeForm(*rform);
 		delete rform;
+
+		std::cout << std::endl;
+		rform = baby->makeForm("inexistente form", "Celia");
+		if (!rform)
+			std::cout << "Form wasn't created.\n";
+		else
+			delete rform;
 	}
 }

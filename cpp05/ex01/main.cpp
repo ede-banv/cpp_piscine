@@ -90,5 +90,9 @@ int main()
 		{
 			std::cout << e.what();
 		}
+
+		delete jojo;
+		delete staff;
+		delete bh;
 	}
 }

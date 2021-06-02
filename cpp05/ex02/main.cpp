@@ -92,6 +92,10 @@ int main()
 		{
 			std::cout << e.what();
 		}
+
+		delete jojo;
+		delete staff;
+		delete bh;
 	}
 	{
 		std::cout << "\n \e[1;36m** Derivated form tests ** \e[0m\n";

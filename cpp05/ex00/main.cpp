@@ -24,6 +24,7 @@ int main()
 	{
 		std::cout << e.what();
 	}
+	std::cout << *emma << std::endl;
 
 	std::cout << "\nDowngrade Martin\n";
 	try
@@ -34,6 +35,7 @@ int main()
 	{
 		std::cout << e.what();
 	}
+	std::cout << *martin << std::endl;
 
 	std::cout << "\nCreate Bureaucrats with grades too low and too high\n";
 	try
