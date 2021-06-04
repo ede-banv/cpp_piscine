@@ -6,7 +6,7 @@ NAME = Conversions
 
 SRCS = main.cpp
 
-OBJS = ${SRCS:.c=.o}
+OBJS = ${SRCS:.cpp=.o}
 
 $(NAME):	${OBJS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
@@ -14,7 +14,7 @@ $(NAME):	${OBJS}
 all:		${NAME}
 
 clean:
-	rm -rf ${SRCS}
+	rm -rf ${OBJS}
 
 fclean:		clean
 	rm -rf ${NAME}
