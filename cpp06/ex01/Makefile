@@ -2,9 +2,9 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME =
+NAME = Serialize
 
-SRCS =
+SRCS = main.cpp Data.cpp serialize.cpp deserialize.cpp
 
 OBJS = ${SRCS:.c=.o}
 

@@ -1,10 +1,21 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 void	show_char(const double d)
 {
-	(void)d;
 	std::cout << "char: ";
+	long int	i = static_cast<long int>(d);
+	if (i < CHAR_MIN || i > CHAR_MAX)
+	{
+		std::cout << "impossible\n";
+		return ;
+	}
+	char	c = static_cast<char>(d);
+	if (!std::isprint(c))
+		std::cout << "Non displayable\n";
+	else
+		std::cout << "'" << c << "'" << std::endl;
 }
 
 void	show_int(const double d)
@@ -17,16 +28,28 @@ void	show_int(const double d)
 		std::cout << i << std::endl;
 }
 
-void	show_float(const double d)
+void	show_float(const double d, const unsigned int prec)
 {
 	std::cout << "float: ";
 	float	f = static_cast<float>(d);
-	std::cout << f << "f" << std::endl;
+	std::cout << std::setprecision(prec) << std::fixed << f << "f" << std::endl;
 }
 
-void	show_double(const double d)
+void	show_double(const double d, const unsigned int prec)
 {
-	std::cout << "double: " << d << std::endl;
+	std::cout << std::setprecision(prec) <<"double: " << d << std::endl;
+}
+
+unsigned int	calc_precision(const char* arg)
+{
+	while (*arg && *arg != '.')
+		arg++;
+	if (!*arg)
+		return (1);
+	int i = 1;
+	while (arg[i] && isdigit(arg[i]))
+		i++;
+	return (i - 1);
 }
 
 int		main(int ac, char** av)
@@ -38,11 +61,12 @@ int		main(int ac, char** av)
 	}
 	else
 	{
-		std::string arg = static_cast<std::string>(av[1]);
-		double		d = std::stod(arg);
+		double			d = std::atof(av[1]);
+		unsigned int	prec = calc_precision(av[1]);
+		show_char(d);
 		show_int(d);
-		show_float(d);
-		show_double(d);
+		show_float(d, prec);
+		show_double(d, prec);
 	}
 	return (0);
 }
