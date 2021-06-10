@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <climits>
+#include <stdlib.h>
 
 void	show_char(const double d)
 {

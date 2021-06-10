@@ -7,6 +7,6 @@ int main()
 	Data*	data = deserialize(ser);
 	std::cout << *data;
 	delete data;
-	delete ser;
+	delete [] reinterpret_cast<char*>(ser);
 	return (0);
 }

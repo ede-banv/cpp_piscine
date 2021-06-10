@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <string.h>
+#include <stdlib.h>
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
