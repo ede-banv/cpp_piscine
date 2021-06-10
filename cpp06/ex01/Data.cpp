@@ -2,7 +2,7 @@
 
 Data::Data(){}
 
-Data::Data(std::string* ptr1, int n, std::string* ptr2):
+Data::Data(std::string ptr1, int n, std::string ptr2):
 _ptr1(ptr1), _randnum(n), _ptr2(ptr2)
 {}
 
@@ -21,12 +21,13 @@ Data&			Data::operator=(const Data& rhs)
 	return *this;
 }
 
-std::string*	Data::getString(int n) const
+std::string		Data::getString(int n) const
 {
 	if (n == 1)
 		return this->_ptr1;
 	if (n == 2)
 		return this->_ptr2;
+	return NULL;
 }
 
 int				Data::getNum() const
@@ -36,5 +37,6 @@ int				Data::getNum() const
 
 std::ostream&	operator<<(std::ostream& o, const Data& rhs)
 {
-	o << "Data:\ns1: " << *rhs.getString(1) << "\nnb: " << rhs.getNum() << "\ns2: " << *rhs.getString(2) << std::endl;
+	o << "Data:\ns1: " << rhs.getString(1) << "\nnb: " << rhs.getNum() << "\ns2: " << rhs.getString(2) << std::endl;
+	return o;
 }

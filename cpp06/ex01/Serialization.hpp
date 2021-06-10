@@ -1,5 +1,5 @@
 #ifndef __SERIALIZATION__
-# define __SERIAlIZATION__
+# define __SERIALIZATION__
 
 
 # include <stdlib.h>
