@@ -1,4 +1,4 @@
-CXX = CLANG++
+CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
