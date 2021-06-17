@@ -2,9 +2,9 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME =
+NAME = MutantStack
 
-SRCS =
+SRCS = Mutantstack.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

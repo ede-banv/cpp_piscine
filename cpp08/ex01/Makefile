@@ -2,9 +2,9 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME =
+NAME = Span
 
-SRCS =
+SRCS = Span.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

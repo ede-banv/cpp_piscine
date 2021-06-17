@@ -1,3 +1,6 @@
+#ifndef	__WHATEVER__
+# define __WHATEVER__
+
 template<typename T>
 void	swap(T& a, T& b)
 {
@@ -27,3 +30,5 @@ const T&	max(const T& a, const T& b)
 	else
 		return (b);
 }
+
+#endif
