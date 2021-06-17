@@ -24,5 +24,15 @@ int main()
 	Array<std::string>	copyarray(strarray);
 	for (int i = 0; i < copyarray.size(); i++)
 		std::cout << copyarray[i] << std::endl;
+
+	std::cout << std::endl;
+	try
+	{
+		copyarray[-1];
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "Index out of bounds.\n";
+	}
 	return (0);
 }
