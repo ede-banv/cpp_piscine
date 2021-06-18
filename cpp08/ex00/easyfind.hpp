@@ -1,4 +1,8 @@
-#include <iostream>
+#ifndef __EASYFIND__
+# define __EASYFIND__
+
+# include <iostream>
+# include <algorithm>
 
 template<typename T>
 typename T::const_iterator	easyfind(const T& cont, int n)
@@ -8,3 +12,5 @@ typename T::const_iterator	easyfind(const T& cont, int n)
 		throw std::exception();
 	return	first;
 }
+
+#endif
