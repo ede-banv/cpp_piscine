@@ -1,19 +1,23 @@
 #ifndef __MUTANTSTACK__
 # define __MUTANTSTACK__
 
+# include <iostream>
 # include <stack>
 
 template<typename T>
-class Mutantstack: public std::stack
+class MutantStack: public std::stack<T>
 {
 	public:
-		Mutantstack(): std::stack<T>() {}
-		Mutantstack(const Mutantstack& copy): std::stack<T>(copy) {}
-		~Mutantstack() {}
+		MutantStack(): std::stack<T>() {}
+		MutantStack(const MutantStack& copy): std::stack<T>(copy) {}
+		~MutantStack() {}
 
-		Mutantstack&	operator=(const Mutantstack& rhs) { std::stack<T>::operator=(rhs); }
-	private:
-		/*args*/
+		MutantStack&	operator=(const MutantStack& rhs) { std::stack<T>::operator=(rhs); return (*this); }
+		typedef	typename std::stack<T>::container_type::iterator iterator;
+		typedef	typename std::stack<T>::container_type::const_iterator const_iterator;
+
+		iterator	begin() { return (this->c.begin()); }
+		iterator	end() { return (this->c.end()); }
 };
 
 #endif
