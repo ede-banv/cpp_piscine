@@ -24,7 +24,7 @@ int main()
 		}
 		catch(const std::exception& e)
 		{
-			std::cout << "Exception: " << e.what() << '\n';
+			std::cout << "\e[1;30mException: \e[0m" << e.what() << '\n';
 		}
 	}
 	{
