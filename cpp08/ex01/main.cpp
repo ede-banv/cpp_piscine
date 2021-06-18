@@ -39,7 +39,7 @@ int main()
 		}
 		catch(const std::exception& e)
 		{
-			std::cout << "Exception: " << e.what() << '\n';
+			std::cout << "\e[1;30mException: \e[0m" << e.what() << '\n';
 		}
 	}
 	{
@@ -60,14 +60,24 @@ int main()
 		std::cout << "Shortest span: " << big.shortestSpan() << std::endl;
 		std::cout << "Longest span: " << big.longestSpan() << std::endl;
 
-		std::cout << "\nTry adding too much wth addRange:\n";
+		std::cout << "\nTry adding too much with addRange:\n";
 		try
 		{
 			big.addRange(rnge.begin(), rnge.end());
 		}
 		catch(const std::exception& e)
 		{
-			std::cout << "Exception: " << e.what() << '\n';
+			std::cout << "\e[1;30mException: \e[0m" << e.what() << '\n';
+		}
+
+		std::cout << "\nTry adding 10001st element:\n";
+		try
+		{
+			big.addNumber(1);
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "\e[1;30mException: \e[0m" << e.what() << '\n';
 		}
 	}
 	return (0);
